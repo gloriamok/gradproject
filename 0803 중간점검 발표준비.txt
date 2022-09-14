@@ -1,0 +1,17 @@
+도커/쿠버네티스, mysql db, 아두이노, 얼굴인식을 사용한 관리자 외 출입금지 서비스
+
+VM 1개 - 도커/미니큐브 설치 완료,,,,,
+파드 5개
+
+MSA
+
+python - (backend) db에서 사진, redis에서 아이디 갖고 와서 - face_recognition - result db에 보내기
+얼굴인식 - 파이썬 라이브러리 face_recognition을 사용, 거리 측정해 평균 구해서 임계값보다 작다면 통과
+
+redis - (queue) 아이디 저장 (push) 가져오기 (pop)
+
+spring boot - 웹 서버 (보여지는 부분 frontend) 아이디 비밀번호로 로그인 후 웹캠으로 사진 찍어서 db에 사진 저장,,,,,redis에 아이디 저장
+
+db - 데이터 저장해 서버에 올리기
+
+아두이노 - 센서를 통해서 true/false인지 확인
