@@ -1,8 +1,10 @@
 FROM python
 
 COPY requirements.txt .
-COPY almost-final.py .
+COPY almost-final-edit.py .
 
 RUN pip install cmake
 RUN pip install dlib
 RUN pip install -r requirements.txt
+
+CMD ["python", "almost-final.py"]
