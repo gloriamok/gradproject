@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: facerec
+  name: facerec
+  namespace: face
+spec:
+  type: ClusterIP
+  ports:
+  - name: "facerec-service"
+    port: 3307
+    targetPort: 3307
+  selector:
+    app: facerec

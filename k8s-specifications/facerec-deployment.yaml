@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: facerec
+  name: facerec
+  namespace: face
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: facerec
+  template:
+    metadata:
+      labels:
+        app: facerec
+    spec:
+      containers:
+      - image: gloriamok/python-face-rec:0.6
+        name: staff-python
+        ports:
+        - containerPort: 3307
+          name: staff-python
