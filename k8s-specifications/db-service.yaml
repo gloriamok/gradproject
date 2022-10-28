@@ -3,6 +3,7 @@ kind: Service
 metadata:
   labels:
     app: db
+    color: blue
   name: mysql-service
   namespace: face
 spec:
@@ -13,3 +14,4 @@ spec:
     targetPort: 3306
   selector:
     app: db
+    color: blue

@@ -3,6 +3,7 @@ kind: Service
 metadata:
   labels:
     app: web
+    color: blue
   name: web
   namespace: face
 spec:
@@ -14,3 +15,4 @@ spec:
     nodePort: 31000
   selector:
     app: web
+    color: blue

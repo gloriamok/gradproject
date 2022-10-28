@@ -3,6 +3,7 @@ kind: Service
 metadata:
   labels:
     app: facerec
+    color: blue
   name: facerec
   namespace: face
 spec:
@@ -13,3 +14,4 @@ spec:
     targetPort: 3307
   selector:
     app: facerec
+    color: blue

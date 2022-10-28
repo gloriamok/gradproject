@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: facerec
+    color: blue
+  name: facerec-blue
+  namespace: face
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: facerec
+      color: blue
+  template:
+    metadata:
+      labels:
+        app: facerec
+        color: blue
+    spec:
+      containers:
+      - image: gloriamok/python-face-rec:0.8
+        name: staff-python
+        securityContext:
+                privileged: true
+        volumeMounts:
+                - mountPath: /dev/ttyUSB0
+                  name: ttyusb
+        ports:
+        - containerPort: 3307
+          name: staff-python
+      volumes:
+              - name: ttyusb
+                hostPath:
+                        path: /dev/ttyUSB0
