@@ -1,2 +1,1 @@
-# gradproject
-7월부터 준비한 졸업작품... 아직도 안끝났다...
+# Graduation Project
