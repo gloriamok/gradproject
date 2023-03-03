@@ -1,0 +1,25 @@
+     Structure:
+        <train_dir>/
+        ├── <person_1>/
+        │   ├── <person_1_face-1>.jpg
+        │   ├── <person_1_face-2>.jpg
+        │   ├── ...
+        │   └── <person_1_face-20>.jpg
+        ├── <person_2>/
+        │   ├── <person_2_face-1>.jpg
+        │   ├── <person_2_face-2>.jpg
+        │   ├── ...
+        │   └── <person_2_face-20>.jpg
+	.
+	.
+	.
+        ├── <person_9>/
+        │   ├── <person_9_face-1>.jpg
+        │   ├── <person_9_face-2>.jpg
+        │   ├── ...
+        │   └── <person_9_face-20>.jpg
+        └── <person_10>/
+        │   ├── <person_10_face-1>.jpg
+        │   ├── <person_10_face-2>.jpg
+        │   ├── ...
+        └   └── <person_10_face-20>.jpg
