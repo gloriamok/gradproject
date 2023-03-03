@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: web
+    color: green
+  name: web-green
+  namespace: face
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web
+      color: green
+  template:
+    metadata:
+      labels:
+        app: web
+        color: green
+    spec:
+      containers:
+      - image: hazzzel/staff-web:0.5
+        name: staff-web
+        ports:
+        - containerPort: 8080
+          name: staff-web

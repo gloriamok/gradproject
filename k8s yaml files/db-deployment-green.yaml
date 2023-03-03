@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: db
+    color: green
+  name: db-green
+  namespace: face
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db
+      color: green
+  template:
+    metadata:
+      labels:
+        app: db
+        color: green
+    spec:
+      containers:
+      - image: hazzzel/staff-db:0.9
+        name: staff-db
+        env: 
+        - name: MYSQL_ROOT_PASSWORD
+          value: root
+        ports:
+        - containerPort: 3306
+          name: staff-db
